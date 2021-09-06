@@ -1,0 +1,98 @@
+/**
+*
+*@author Fer Carraro
+*@date 05/09/2021
+*/
+
+/*
+apply plugin: 'base'
+apply plugin: 'java'
+
+buildscript {
+  repositories {
+    maven {
+      url "https://plugins.gradle.org/m2/"
+    }
+  }
+  dependencies {
+    classpath "org.gretty:gretty:4.0.0"
+    implementation 'org.slf4j:slf4j-api:2.0.0-alpha5'
+    testImplementation 'org.slf4j:slf4j-simple:2.0.0-alpha5'
+    implementation 'ch.qos.logback:logback-core:1.3.0-alpha10'
+    implementation 'org.apache.struts:struts2-core:2.5.26'
+    }
+}
+
+apply plugin: "org.gretty"
+*/
+
+
+
+/*
+configurations {
+   moreLibs
+}
+
+repositories {
+   flatDir { dirs "lib" }
+   mavenCentral()
+}
+
+dependencies {
+    implementation module(":compile:1.0") {
+        dependency ":compile-transitive-1.0@jar"
+        dependency ":providedCompile-transitive:1.0@jar"
+    }
+    providedCompile "javax.servlet:servlet-api:2.5"
+    providedCompile module(":providedCompile:1.0") {
+        dependency ":providedCompile-transitive:1.0@jar"
+    }
+    runtimeOnly ":runtime:1.0"
+    providedRuntime ":providedRuntime:1.0@jar"
+    testImplementation "junit:junit:4.13"
+    moreLibs ":otherLib:1.0"
+}
+
+war {
+    webAppDirectory = file('src/main/webapp')
+    from 'src/rootContent' // adds a file-set to the root of the archive
+    webInf { from 'src/additionalWebInf' } // adds a file-set to the WEB-INF dir.
+    classpath fileTree('additionalLibs') // adds a file-set to the WEB-INF/lib dir.
+    classpath configurations.moreLibs // adds a configuration to the WEB-INF/lib dir.
+    webXml = file('src/someWeb.xml') // copies a file to WEB-INF/web.xml
+}
+*/
+
+
+
+repositories {
+    jcenter()
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    classpath "org.gretty:gretty:4.0.0"
+    implementation 'org.slf4j:slf4j-api:2.0.0-alpha5'
+    testImplementation 'org.slf4j:slf4j-simple:2.0.0-alpha5'
+    implementation 'ch.qos.logback:logback-core:1.3.0-alpha10'
+    implementation 'org.apache.struts:struts2-core:2.5.26'
+    compileOnly 'javax.servlet:servlet-api:3.0-alpha-1'
+}
+
+task copyDependencies(type:Copy) {
+    copy {
+        from configurations.runtime
+        into 'WebContent/WEB-INF/lib'
+    }
+}
+
+apply plugin: 'org.gretty'
+apply plugin: 'java'
+
+
+
+
+
+
+ 
