@@ -63,6 +63,40 @@ war {
 }
 */
 
+/*
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+group = 'com.mzielinski'
+artefact = 'struts2'
+version = '1.0.0-SNAPSHOT'
+
+strutsVersion = "2.3.15.1"
+tilesVersion = "2.2.2"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.apache.struts', name: 'struts2-core', version: strutsVersion
+    compile group: 'org.apache.struts', name: 'struts2-tiles-plugin', version: strutsVersion
+    compile group: 'org.apache.struts', name: 'struts2-dojo-plugin', version: strutsVersion
+    compile group: 'org.apache.tiles', name: 'tiles-api', version: tilesVersion
+    compile group: 'org.apache.tiles', name: 'tiles-core', version: tilesVersion
+    compile group: 'org.apache.tiles', name: 'tiles-jsp', version: tilesVersion
+    compile group: 'org.apache.tiles', name: 'tiles-servlet', version: tilesVersion
+    compile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.5.6'
+    compile group: 'commons-io', name: 'commons-io', version: '2.4'
+    compile group: 'org.hibernate', name: 'hibernate-core', version: '4.2.4.Final'
+    compile group: 'org.hsqldb', name: 'hsqldb', version: '2.0.0'
+    providedCompile group: 'javax.servlet', name: 'servlet-api', version: '2.4'
+}
+
+*/
+
+
 
 
 repositories {
