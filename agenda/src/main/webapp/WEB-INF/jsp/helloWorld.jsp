@@ -6,11 +6,10 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<title>Hello World</title>
+	<title>Bienvenido</title>
 	<s:head />
 </head>
 <body>
-	Hello <s:property value="name"/>, today is <s:property value="dateNow" /><br/>
-
+	Bienvenido <s:property value="name"/>, hoy es <s:property value="dateNow" /><br/>
 </body>
 </html>

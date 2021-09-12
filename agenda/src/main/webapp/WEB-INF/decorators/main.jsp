@@ -16,13 +16,13 @@
 <body id="page-home">
     <div id="page">
         <div id="header" class="clearfix">
-        	HEADER
+        	Aprendiendo Struts2
             <hr />
         </div>
         
         <div id="content" class="clearfix">
             <div id="main">
-            	<h3>Main Content</h3>
+            	<h3>Necesitamos tus datos</h3>
             	<decorator:body/>
                 <hr />
             </div>
@@ -33,7 +33,7 @@
             
             
             <div id="local">
-                <h3>Local Nav. Bar</h3>
+                <h3>Páginas del sitio</h3>
                 <ul>
                     <li><a href="#">Content page 1</a></li>
                     <li><a href="#">Content page 2</a></li>
@@ -47,7 +47,7 @@
             
             <div id="nav">
                 <div class="wrapper">
-                <h3>Nav. bar</h3>
+                <h3>Menú principal</h3>
                 <ul class="clearfix">
                      <li><a href="#">Menu 1</a></li>
                      <li><a href="#">Menu 2</a></li>
@@ -62,7 +62,7 @@
         </div>
         
         <div id="footer" class="clearfix">
-            Footer
+            @inforhomex 2021
         </div>
         
     </div>
