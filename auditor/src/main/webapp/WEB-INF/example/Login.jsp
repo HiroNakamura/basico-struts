@@ -2,7 +2,7 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 <head>
-    <title>Sign On</title>
+    <title>Firmarse</title>
 </head>
 
 <body>

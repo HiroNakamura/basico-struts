@@ -8,7 +8,7 @@
 <body>
 <h2><s:property value="message"/></h2>
 
-<h3>Languages</h3>
+<h3>Idiomas</h3>
 <ul>
     <li>
         <s:url var="url" action="HelloWorld">
@@ -20,7 +20,7 @@
         <s:url var="url" action="HelloWorld">
             <s:param name="request_locale">es</s:param>
         </s:url>
-        <s:a href="%{url}">Espanol</s:a>
+        <s:a href="%{url}">Español</s:a>
     </li>
 </ul>
 
