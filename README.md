@@ -4,7 +4,20 @@ Struts2
 
 Apache Struts es un marco MVC gratuito y de código abierto para crear aplicaciones web Java elegantes y modernas. Favorece la convención sobre la configuración, es extensible mediante una arquitectura de complementos y se envía con complementos para admitir REST, AJAX y JSON.
 
-**Crear proyecto con Maven**
+
+**Crear proyecto con Maven (blank)**
+
+```bash
+$ mvn archetype:generate -B -DgroupId=org.cursomaven -DartifactId=auditor -DarchetypeGroupId=org.apache.struts  -DarchetypeArtifactId=struts2-archetype-blank -DinteractiveMode=false
+$ tree
+$ cd auditor && ls
+$ mvn clean package
+$ mvn dependency:tree
+$ mvn jetty:run
+```
+
+
+**Crear proyecto con Maven (starter)**
 ```bash
 $ mvn --version
 $ mvn archetype:generate -B -DgroupId=org.cursomaven -DartifactId=agenda -DarchetypeGroupId=org.apache.struts  -DarchetypeArtifactId=struts2-archetype-starter -DinteractiveMode=false
@@ -15,7 +28,6 @@ $ mvn dependency:tree
 $ mvn jetty:run
 ```
 Abrimos el navegador en: http://localhost:8080/agenda/index.action
-
 
 
 **Crear proyecto con Gradle**
